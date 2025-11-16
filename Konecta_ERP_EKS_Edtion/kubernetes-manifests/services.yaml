@@ -1,0 +1,213 @@
+####################################################################
+# kubernetes-manifests/services.yaml
+# Services for all 11 applications
+####################################################################
+
+---
+# App 1 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app1-service
+  namespace: erp-apps
+  labels:
+    app: app1
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app1
+
+---
+# App 2 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app2-service
+  namespace: erp-apps
+  labels:
+    app: app2
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app2
+
+---
+# App 3 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app3-service
+  namespace: erp-apps
+  labels:
+    app: app3
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app3
+
+---
+# App 4 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app4-service
+  namespace: erp-apps
+  labels:
+    app: app4
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app4
+
+---
+# App 5 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app5-service
+  namespace: erp-apps
+  labels:
+    app: app5
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app5
+
+---
+# App 6 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app6-service
+  namespace: erp-apps
+  labels:
+    app: app6
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app6
+
+---
+# App 7 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app7-service
+  namespace: erp-apps
+  labels:
+    app: app7
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app7
+
+---
+# App 8 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app8-service
+  namespace: erp-apps
+  labels:
+    app: app8
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app8
+
+---
+# App 9 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app9-service
+  namespace: erp-apps
+  labels:
+    app: app9
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app9
+
+---
+# App 10 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app10-service
+  namespace: erp-apps
+  labels:
+    app: app10
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app10
+
+---
+# App 11 Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app11-service
+  namespace: erp-apps
+  labels:
+    app: app11
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: app11

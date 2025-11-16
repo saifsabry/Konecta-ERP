@@ -1,0 +1,11 @@
+####################################################################
+# kubernetes-manifests/namespace.yaml
+# Create namespace for ERP applications
+####################################################################
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: erp-apps
+  labels:
+    name: erp-apps
+    environment: production

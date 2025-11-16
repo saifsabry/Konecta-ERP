@@ -1,0 +1,392 @@
+####################################################################
+# kubernetes-manifests/deployments.yaml
+# All 11 application deployments
+####################################################################
+
+---
+# App 1 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1-deployment
+  namespace: erp-apps
+  labels:
+    app: app1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app1
+  template:
+    metadata:
+      labels:
+        app: app1
+    spec:
+      containers:
+      - name: app1-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app1_repo:latest
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app1"
+        - name: APP_ENV
+          value: "production"
+
+---
+# App 2 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2-deployment
+  namespace: erp-apps
+  labels:
+    app: app2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app2
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      containers:
+      - name: app2-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app2_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app2"
+
+---
+# App 3 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app3-deployment
+  namespace: erp-apps
+  labels:
+    app: app3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app3
+  template:
+    metadata:
+      labels:
+        app: app3
+    spec:
+      containers:
+      - name: app3-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app3_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app3"
+
+---
+# App 4 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app4-deployment
+  namespace: erp-apps
+  labels:
+    app: app4
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app4
+  template:
+    metadata:
+      labels:
+        app: app4
+    spec:
+      containers:
+      - name: app4-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app4_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app4"
+
+---
+# App 5 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app5-deployment
+  namespace: erp-apps
+  labels:
+    app: app5
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app5
+  template:
+    metadata:
+      labels:
+        app: app5
+    spec:
+      containers:
+      - name: app5-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app5_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app5"
+
+---
+# App 6 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app6-deployment
+  namespace: erp-apps
+  labels:
+    app: app6
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app6
+  template:
+    metadata:
+      labels:
+        app: app6
+    spec:
+      containers:
+      - name: app6-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app6_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app6"
+
+---
+# App 7 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app7-deployment
+  namespace: erp-apps
+  labels:
+    app: app7
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app7
+  template:
+    metadata:
+      labels:
+        app: app7
+    spec:
+      containers:
+      - name: app7-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app7_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app7"
+
+---
+# App 8 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app8-deployment
+  namespace: erp-apps
+  labels:
+    app: app8
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app8
+  template:
+    metadata:
+      labels:
+        app: app8
+    spec:
+      containers:
+      - name: app8-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app8_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app8"
+
+---
+# App 9 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app9-deployment
+  namespace: erp-apps
+  labels:
+    app: app9
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app9
+  template:
+    metadata:
+      labels:
+        app: app9
+    spec:
+      containers:
+      - name: app9-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app9_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app9"
+
+---
+# App 10 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app10-deployment
+  namespace: erp-apps
+  labels:
+    app: app10
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app10
+  template:
+    metadata:
+      labels:
+        app: app10
+    spec:
+      containers:
+      - name: app10-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app10_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app10"
+
+---
+# App 11 Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app11-deployment
+  namespace: erp-apps
+  labels:
+    app: app11
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app11
+  template:
+    metadata:
+      labels:
+        app: app11
+    spec:
+      containers:
+      - name: app11-container
+        image: 482352877046.dkr.ecr.eu-central-1.amazonaws.com/app11_repo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: APP_NAME
+          value: "app11"
